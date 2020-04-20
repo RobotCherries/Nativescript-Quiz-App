@@ -1,0 +1,26 @@
+<!-- <ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label text="Home"></Label>
+</ActionBar> -->
+
+<GridLayout rows="*">
+    <ScrollView row="0">
+        <StackLayout class="quiz">
+            <GridLayout class="quiz__card quiz__card--{{ (i+1) }}" *ngFor="let item of categories; let i = index"
+                rows="auto, auto, *, auto" columns="*, auto" height="250"
+                [ngStyle]="{'background': item.backgroundGradient}" (tap)="navigateToQuiz(i)">
+                <Image row="0" rowSpan="3" col="1" [src]="item.image" height="150" width="150"></Image>
+
+                <Label row="0" col="0" colSpan="2" color="rgba(255,255,255, 0.9)" fontSize="15"
+                    [text]="'NEXT TEST - ' + item.quizDate"></Label>
+
+                <Label row="1" col="0" colSpan="2" color="rgba(255,255,255, 0.9)" fontSize="15"
+                    [text]="'LAST SCORE - ' + item.lastScore + '%'"></Label>
+
+                <Label class="quiz__title" row="3" col="0" colSpan="2" [text]="item.title"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

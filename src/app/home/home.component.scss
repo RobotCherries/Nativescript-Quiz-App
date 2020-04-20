@@ -1,0 +1,34 @@
+.description-label{
+    margin-bottom: 150;
+}
+
+.quiz {
+    margin: 70px 0;
+    // background-color: #250046;
+    
+    &__card {
+        // background-color: blue;
+        border-radius: 30px;
+        margin: 20px 60px;
+        padding: 50px;
+        border: 2px solid red;
+        
+        // &--1 {
+        //     background: linear-gradient(to right, #2B1C8C 15%, #5549a3 100%);
+        // }
+        
+        // &--2 {
+        //     background: linear-gradient(to right, #3B42D9 15%, #6067e1 100%);
+        // }
+        
+        // &--3 {
+        //     background: linear-gradient(to right, #5C73F2 15%, #8293f6 100%);
+        // }
+    }
+    
+    &__title {
+        color: #ffffff;
+        font-size: 30;
+        font-weight: bold;
+    } 
+}
